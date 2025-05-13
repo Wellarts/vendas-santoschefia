@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,37 +11,47 @@
 
     <title>Comprovante de Venda</title>
 </head>
+
 <body>
 
-    <div class="mx-8">
-        <p style="font-size:150%" align="center"><b>Stilo Baby</b><p>
-        <p style="font-size:150%" align="center">Av. Agamenon Magalhães, 135 - Lajedo - PE<p>
-        <p style="font-size:130%" align="center">Telefone:  (87)8162-7846</p>
-        <p style="font-size:130%" align="center">Comprovante de Venda</p>
+    <table style="width: 100%">
+        <tr>
+            <td><img src="{{ asset('img/logo.png') }}" alt="Image" height="48" width="144"></td>
+            <td>
+                <p style="width: 100%; font-size:28px; font-weight: bold;" align="center">Delicaty Acessórios</p>
+                <p style="font-size:16px;" align="center">Instagram: @delicatyacessorios - (87)99931-7326</p><br>
+
+            </td>
+        </tr>
+
+    </table>
+    <br><br>
+    <div class="text-center">
+        <h4>Comprovante</h4>
     </div>
 
-   
-<div style="font-size:80%">
-    <div class="mx-8" >
-                <table class="table">
-                    <thead align="center">
-                        <td><b>Venda</b></td>
-                        <td><b>Cliente</b></td>
-                        <td><b>Data</b></td>
-                        <td><b>Forma de Pagamento</b></td>
-                      <!--  <td><b>Valor Total</b></td> -->
-                    </thead>
-                    <tbody align="center">
-                        <td>{{$vendas->id}}</td>
-                        <td>{{$vendas->cliente->nome}}</td>
-                        <td>{{$vendas->data_venda}}</td>
-                        <td>{{$vendas->formaPgmto->nome}}</td>
+
+    <div style="font-size:80%">
+        <div class="mx-8">
+            <table class="table">
+                <thead align="center">
+                    <td><b>Venda</b></td>
+                    <td><b>Cliente</b></td>
+                    <td><b>Data</b></td>
+                    <td><b>Forma de Pagamento</b></td>
+                    <!--  <td><b>Valor Total</b></td> -->
+                </thead>
+                <tbody align="center">
+                    <td>{{$vendas->id}}</td>
+                    <td>{{$vendas->cliente->nome}}</td>
+                    <td>{{$vendas->data_venda}}</td>
+                    <td>{{$vendas->formaPgmto->nome}}</td>
                     <!--    <td><label>R$</label> {{$vendas->valor_total}}</td> -->
 
                     <tr>
-                    <td colspan="5">
-                        <table class="table">
-                            <tr>
+                        <td colspan="5">
+                            <table class="table">
+                                <tr>
                                     <thead align="center">
                                         <td><b>Produto</b></td>
                                         <td><b>Valor</b></td>
@@ -49,50 +60,47 @@
                                         <td><b>SubTotal</b></td>
                                     </thead>
                                 </tr>
-                            <tr>
+                                <tr>
                                     <tbody align="center">
                                         @foreach ($vendas->itensVenda as $itens)
-                                            <tr>
-                                                    <td>{{$itens->produto->nome}}</td>
-                                                    <td><label>R$</label> {{$itens->valor_venda}}</td>
-                                                    <td>{{$itens->qtd}}</td>
-                                                    <td><label>R$</label> {{$itens->acres_desc}}</td>
-                                                    <td><label>R$</label> {{$itens->sub_total}}</td>
-                                            </tr>
+                                        <tr>
+                                            <td>{{$itens->produto->nome}}</td>
+                                            <td><label>R$</label> {{$itens->valor_venda}}</td>
+                                            <td>{{$itens->qtd}}</td>
+                                            <td><label>R$</label> {{$itens->acres_desc}}</td>
+                                            <td><label>R$</label> {{$itens->sub_total}}</td>
+                                        </tr>
                                         @endforeach
                                     </tbody>
-                                   
-                                   
-                            </tr>
 
-                                                       
 
-                        </table>
-                    </td>
-                </tr>
-               
+                                </tr>
+
+
+
+                            </table>
+                        </td>
+                    </tr>
+
 
                 </tbody>
             </table>
             <div>
                 <p style="text-align:right; font-size:150%;">VALOR TOTAL: R$ {{$vendas->valor_total}}</p>
-             </div>
+            </div>
 
-            <div  align="center">
+            <div align="center">
                 <br><br><br>
                 <tr>_________________________________________________________</tr><br>
-                            <tr><label>Cliente</label></tr>
+                <tr><label>Cliente</label></tr>
             </div>
+        </div>
     </div>
-</div>
 
 
-  
+
 
 
 </body>
+
 </html>
-
-
-
-

@@ -12,16 +12,20 @@
 </head>
 <body>
 
-    <div class="d-flex align-items-center mx-8">
-        <div class="me-3">
-            <img src="{{ asset('logo.png') }}" alt="Logo" style="width: 100px; height: auto;">
-        </div>
-        <div>
-            <p style="font-size:150%" align="center"><b>Delicaty</b><p>
-            <p style="font-size:150%" align="center"><b>Instagram: https://www.instagram.com/delicatyacessorios/</b><p>
-            <p style="font-size:130%" align="center">Telefone:  (87)9931-7326</p>
-            <p style="font-size:130%" align="center">Comprovante de Venda</p>
-        </div>
+   <table style="width: 100%">
+        <tr>
+            <td><img src="{{ asset('img/logo.png') }}" alt="Image" height="48" width="144"></td>
+            <td>
+                <p style="width: 100%; font-size:28px; font-weight: bold;" align="center">Delicaty Acessórios</p>
+                <p style="font-size:16px;" align="center">Instagram: @delicatyacessorios - (87)99931-7326</p><br>
+
+            </td>
+        </tr>
+
+    </table>
+    <br><br>
+    <div class="text-center">
+        <h4>Comprovante</h4>
     </div>
 
    
