@@ -12,11 +12,16 @@
 </head>
 <body>
 
-    <div class="mx-8">
-        <p style="font-size:150%" align="center"><b>Stilo Baby</b><p>
-        <p style="font-size:150%" align="center"><b>Endereço: Av. Agamenon Magalhães, 135 - Lajedo - PE</b><p>
-        <p style="font-size:130%" align="center">Telefone:  (87)8162-7846</p>
-        <p style="font-size:130%" align="center">Comprovante de Venda</p>
+    <div class="d-flex align-items-center mx-8">
+        <div class="me-3">
+            <img src="{{ asset('logo.png') }}" alt="Logo" style="width: 100px; height: auto;">
+        </div>
+        <div>
+            <p style="font-size:150%" align="center"><b>Delicaty</b><p>
+            <p style="font-size:150%" align="center"><b>Instagram: https://www.instagram.com/delicatyacessorios/</b><p>
+            <p style="font-size:130%" align="center">Telefone:  (87)9931-7326</p>
+            <p style="font-size:130%" align="center">Comprovante de Venda</p>
+        </div>
     </div>
 
    
