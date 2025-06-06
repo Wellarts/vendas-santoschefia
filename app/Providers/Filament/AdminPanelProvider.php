@@ -2,16 +2,16 @@
 
 namespace App\Providers\Filament;
 
+
 use App\Livewire\ComprasMesChart;
 use App\Livewire\PagarHojeStatsOverview;
-use App\Livewire\RanckingProdutos;
 use App\Livewire\ReceberHojeStatsOverview;
 use App\Livewire\VendasMesChart;
 use App\Livewire\VendasPDVMesChart;
+use App\Livewire\TotalVendasPorCliente;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
-use Filament\Pages;
 use Filament\Panel;
 use Filament\View\PanelsRenderHook;
 use Illuminate\Support\Facades\Blade;
@@ -57,6 +57,8 @@ class AdminPanelProvider extends PanelProvider
                 VendasMesChart::class,
                 VendasPDVMesChart::class,
                 ComprasMesChart::class,
+                TotalVendasPorCliente::class,
+
                // RanckingProdutos::class,
 
             ])
